@@ -1,4 +1,5 @@
-# third-semester-exam
+# Altschool Third semester Examination
+## Counter App using Vuex for state management
 
 ## Project setup
 ```
@@ -14,7 +15,6 @@ yarn serve
 ```
 yarn build
 ```
-
 ### Lints and fixes files
 ```
 yarn lint
@@ -22,3 +22,8 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Hosted Link
+```
+https://alt-school-third-semester-exam.vercel.app/
+```
