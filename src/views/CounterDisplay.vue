@@ -6,7 +6,10 @@
         <button class="btn" @click="increment">+</button>
         <button class="btn" @click="decrement">-</button>
       </div>
-      <input placeholder="set value" type="number" v-model="inputValue" @input="setValue(inputValue)" />
+      <form @submit.prevent="submitValue">
+        <input placeholder="set value ..." type="number" v-model="inputValue" />
+        <button class='submit' type="submit">Set</button>
+      </form>
       <button class='reset' @click="reset">Reset</button>
     </div>
   </div>
@@ -22,6 +25,11 @@ export default {
     const value = computed(() => count.value);
     const inputValue = ref('');
 
+    const submitValue = () => {
+      setValue(inputValue.value);
+      inputValue.value = '';
+    }
+
     return {
       count,
       increment,
@@ -29,7 +37,7 @@ export default {
       reset,
       value,
       inputValue,
-      setValue,
+      submitValue,
     };
   },
 };
