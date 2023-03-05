@@ -10,7 +10,7 @@
         <input placeholder="set value ..." type="number" v-model="inputValue" />
         <button class='submit' type="submit">Set</button>
       </form>
-      <button class='reset' @click="reset">Reset</button>
+      <button class='reset' @click="resetValues">Reset</button>
     </div>
   </div>
 </template>
@@ -30,6 +30,11 @@ export default {
       inputValue.value = '';
     }
 
+    const resetValues = () => {
+      reset();
+      inputValue.value = '';
+    }
+
     return {
       count,
       increment,
@@ -38,6 +43,7 @@ export default {
       value,
       inputValue,
       submitValue,
+      resetValues,
     };
   },
 };
